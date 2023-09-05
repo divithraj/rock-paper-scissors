@@ -3,7 +3,7 @@ def rockPaperScissors(userChoice, computerChoice):
     if userChoice != "rock" and userChoice != "scissors" and userChoice != "paper":
         return "Invalid Choice. Please select rock, paper, or scissors."
     if userChoice == computerChoice:
-        return "Tie Game.  You both selected:", userChoice
+        return "Tie Game.  You both selected: " + userChoice 
     else:
         if userChoice == "rock" and computerChoice == "paper":
             return "You lose. Paper beats Rock."
