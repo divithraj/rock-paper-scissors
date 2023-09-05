@@ -15,7 +15,7 @@ def rockPaperScissors(userChoice, computerChoice):
             return "You lose.  Scissors beats paper."
         if userChoice == "scissors" and computerChoice == "paper":
             return "You win. Scissors beats Paper."
-        if userChoice == "paper" and computerChoice == "scissors":
+        if userChoice == "scissors" and computerChoice == "rock":
             return "You lose.  Rock beats Scissors."
     exit
                       
