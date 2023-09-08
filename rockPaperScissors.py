@@ -1,7 +1,9 @@
 import random
+
 def rockPaperScissors(userChoice, computerChoice):
     if userChoice != "rock" and userChoice != "scissors" and userChoice != "paper":
         return "Invalid Choice. Please select rock, paper, or scissors."
+    
     if userChoice == computerChoice:
         return "Tie Game.  You both selected: " + userChoice 
     else:
@@ -17,9 +19,16 @@ def rockPaperScissors(userChoice, computerChoice):
             return "You win. Scissors beats Paper."
         if userChoice == "scissors" and computerChoice == "rock":
             return "You lose.  Rock beats Scissors."
-    exit
-                      
-userChoice = input("Rock, Paper, or Scissors? ").lower().strip()
-options = ["rock", "paper", "scissors"]
-computerChoice = random.choice(options)
-print(rockPaperScissors(userChoice, computerChoice)) 
+
+# Start the game loop
+while True:
+    userChoice = input("\nRock, Paper, or Scissors? (or type 'exit' to quit) ").lower().strip()
+    
+    # Check if user wants to exit
+    if userChoice == "exit":
+        print("Thanks for playing!")
+        break
+
+    options = ["rock", "paper", "scissors"]
+    computerChoice = random.choice(options)
+    print(rockPaperScissors(userChoice, computerChoice))
